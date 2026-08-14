@@ -19,7 +19,7 @@ app.use("/contact", formRoutes);
 
 // Test route
 app.get("/", (req, res) => {
-    res.send("Kahal Backend is Running OK ON 5555!");
+    res.send("Kahal Backend  updated is Running OK ON 5555!");
 });
 
 const PORT = process.env.PORT || 5555;
