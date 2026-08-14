@@ -1,0 +1,1698 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #b9d8d1, #909393);
+}
+
+
+
+
+/* ================= COACHING HERO SECTION ================= */
+.coaching-hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* BG GRADIENT - no image */
+  background: linear-gradient(to bottom, #b9d8d1, #FFF);
+}
+
+/* ================= SPARKLES SVG ================= */
+.coaching-hero-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ================= SPARKLE ANIMATION ================= */
+@keyframes coaching-sparkle-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+}
+
+.coaching-sparkle {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0.6;
+  animation: coaching-sparkle-pulse 2.8s ease-in-out infinite;
+}
+
+.coaching-sparkle-1 {
+  animation-delay: 0s;
+}
+
+.coaching-sparkle-2 {
+  animation-delay: -0.7s;
+}
+
+.coaching-sparkle-3 {
+  animation-delay: -1.4s;
+}
+
+.coaching-sparkle-4 {
+  animation-delay: -2.1s;
+}
+
+/* ================= CONTENT CENTERED ================= */
+.coaching-hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* ================= HEADLINE (3 lines) ================= */
+.coaching-hero-headline {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.08;
+  color: #000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
+}
+
+/* ================= SUBTEXT ================= */
+.coaching-hero-sub {
+  font-family: "Rosario", sans-serif;
+  font-size: 20px;
+  color: #1f1f1f;
+  max-width: 700px;
+  margin-bottom: 38px;
+  opacity: 0.85;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ================= BUTTON ================= */
+.coaching-hero-btn {
+  position: relative;
+  width: 350px;
+  height: 66px;
+  border: none;
+  border-radius: 999px;
+  background: #b9d8d1c0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Rosario", sans-serif;
+}
+
+.coaching-hero-btn:hover {
+  background: #b9d8d1;
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.coaching-btn-text {
+  width: calc(100% - 58px);
+  height: 50px;
+  border-radius: 999px;
+  background: #000;
+  color: #d9ece4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.3s ease;
+  font-family: "Rosario", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.coaching-hero-btn:hover .coaching-btn-text {
+  background: #1a1a1a;
+}
+
+.coaching-btn-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.coaching-hero-btn:hover .coaching-btn-icon {
+  transform: rotate(45deg);
+  border-color: #1a1a1a;
+}
+
+.coaching-btn-icon i {
+  font-size: 18px;
+}
+
+
+/* COACHING HERO BG IMAGES */
+.coaching-hero-bg-img {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.coaching-hero-bg-topright {
+  top: 0%;
+  right: 0;
+  width: 600px;
+  height: auto;
+}
+
+.coaching-hero-bg-leftcenter {
+  top: 38%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 500px;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .coaching-hero-bg-topright {
+    width: clamp(260px, 30vw, 380px);
+  }
+
+  .coaching-hero-bg-leftcenter {
+    width: clamp(120px, 14vw, 200px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .coaching-hero-bg-topright {
+    width: 260px !important;
+    opacity: 0.65;
+  }
+
+  .coaching-hero-bg-leftcenter {
+    width: 210px !important;
+    opacity: 0.55;
+  }
+}
+
+/* Update z-indexes */
+.coaching-hero-svg {
+  z-index: 3 !important;
+}
+
+.coaching-hero-content {
+  z-index: 4 !important;
+}
+
+/* ================= RESPONSIVE ================= */
+/* Tablet */
+@media (max-width: 1024px) {
+  .coaching-hero {
+    height: 78vh;
+  }
+
+  .coaching-hero-headline {
+    font-size: 50px !important;
+    margin-bottom: 20px;
+  }
+
+  .coaching-hero-sub {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .coaching-hero-btn {
+    width: 320px;
+    height: 58px;
+  }
+
+  .coaching-btn-text {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .coaching-btn-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .coaching-btn-icon i {
+    font-size: 15px;
+  }
+
+  .coaching-hero-bg-leftcenter {
+    top: 24%;
+    width: 400px
+  }
+
+  .coaching-hero-bg-topright {
+    top: 39%;
+    right: -2%;
+    width: 450px
+  }
+
+
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .coaching-hero {
+    height: 60vh;
+    min-height: 500px;
+  }
+
+  .coaching-hero-headline {
+    font-size: 24px !important;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .coaching-hero-sub {
+    font-size: 11px;
+    margin-bottom: 28px;
+    padding: 0 10px;
+  }
+
+  .coaching-hero-sub br {
+    display: none;
+    /* Hide <br> on mobile so text wraps naturally */
+  }
+
+  .coaching-hero-btn {
+    width: 250px;
+    height: 52px;
+    padding: 5px 6px 5px 12px;
+  }
+
+  .coaching-btn-text {
+    width: calc(100% - 44px);
+    height: 40px;
+    font-size: 11px;
+  }
+
+  .coaching-btn-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .coaching-btn-icon i {
+    font-size: 13px;
+  }
+
+
+  .coaching-hero-bg-leftcenter {
+    top: 24%;
+    width: 400px
+  }
+
+  .coaching-hero-bg-topright {
+    top: 35%;
+    right: -3%;
+    width: 650px
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .coaching-hero {
+    height: 55vh;
+    min-height: 460px;
+  }
+
+  .coaching-hero-headline {
+    /* font-size: 24px;  */
+    margin-bottom: 12px;
+  }
+
+  .coaching-hero-sub {
+    /* font-size: 12px;  */
+    margin-bottom: 24px;
+  }
+
+  .coaching-hero-btn {
+    /* width: 200px;  */
+    height: 46px;
+  }
+
+  .coaching-btn-text {
+    font-size: 10px;
+    height: 36px;
+  }
+
+  .coaching-btn-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .coaching-hero {
+    height: 100vh;
+  }
+}
+
+
+
+@media (min-width: 1600px) and (max-width: 2500px) {
+
+  .coaching-hero-bg-leftcenter {
+    top: 35%;
+    width: 600px
+  }
+
+  .coaching-hero-bg-topright {
+    top: 10%;
+    width: 700px
+  }
+
+
+}
+
+
+
+
+/* ================= STORY SECTION ================= */
+
+.story-life {
+  width: 100%;
+  background: #fffafa;
+  padding: 80px 20px;
+}
+
+.story-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ===== HELPER CLASSES ===== */
+.desktop-story {
+  display: grid;
+}
+
+.mobile-story-content {
+  display: none;
+}
+
+/* ===== HEADING with VERTICAL LINE ===== */
+.story-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 55px;
+}
+
+.story-line {
+  width: 8px;
+  height: 60px;
+  background: #000;
+  border-radius: 999px;
+}
+
+.story-heading h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* ===== GRID (DESKTOP) ===== */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px 50px;
+  align-items: start;
+}
+
+/* ===== TEXT STYLES ===== */
+.story-box {
+  width: 100%;
+}
+
+.story-text p {
+  font-family: "Rosario", sans-serif;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #111;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+/* First Letter Drop Cap (Desktop) */
+.first-letter p:first-child::first-letter {
+  font-size: 60px;
+  font-weight: 700;
+  float: left;
+  line-height: 0.5;
+  padding-right: 8px;
+  margin-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ===== IMAGE WRAPPER for ICONS ===== */
+.story-image-wrapper {
+  position: relative;
+}
+
+.story-image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.story-image-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0 40px 0 40px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== ICONS (asterisk) ===== */
+.story-icon {
+  position: absolute;
+  color: #2aaa8a;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 300,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+/* ICON 1: Top Left - BEHIND the image */
+.story-icon-top-left {
+  top: -60px;
+  left: 24px;
+  z-index: 1;
+  font-size: 160px !important;
+}
+
+/* ICON 2: Bottom Right - ON TOP of the image */
+.story-icon-bottom-right {
+  bottom: 54px;
+  right: 0px;
+  z-index: 3;
+  font-size: 48px !important;
+}
+
+/* ===== MOBILE/TABLET TEXT STYLES ===== */
+.mobile-story-text {
+  width: 100%;
+}
+
+.mobile-story-text p {
+  font-family: "Rosario", sans-serif;
+  font-size: 19px;
+  line-height: 1.75;
+  color: #111;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+/* First Letter Drop Cap (Mobile/Tablet) */
+.first-letter-mobile p:first-child::first-letter {
+  font-size: 60px;
+  font-weight: 700;
+  float: left;
+  line-height: 0.5;
+  padding-right: 8px;
+  margin-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ============================================ */
+/* TABLET (max-width: 1024px)                  */
+/* ============================================ */
+@media (max-width: 1024px) {
+  .story-life {
+    padding: 70px 24px;
+  }
+
+  .story-heading {
+    margin-bottom: 40px;
+  }
+
+  .story-heading h2 {
+    font-size: 40px;
+  }
+
+  .story-line {
+    height: 48px;
+    width: 7px;
+  }
+
+  /* HIDE desktop version */
+  .desktop-story {
+    display: none;
+  }
+
+  /* SHOW mobile/tablet version */
+  .mobile-story-content {
+    display: block;
+  }
+
+  .mobile-story-text p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .story-image-container img {
+    height: 380px;
+  }
+
+  .story-icon {
+    font-size: 42px !important;
+  }
+
+  .story-icon-top-left {
+    top: -21px;
+    left: -21px;
+  }
+
+  .story-icon-bottom-right {
+    bottom: -21px;
+    right: -21px;
+  }
+
+  .first-letter-mobile p:first-child::first-letter {
+    font-size: 52px;
+  }
+
+  .mobile-image {
+    margin-bottom: 35px;
+  }
+}
+
+/* ============================================ */
+/* MOBILE (max-width: 768px)                   */
+/* ============================================ */
+@media (max-width: 768px) {
+  .story-life {
+    padding: 60px 16px;
+  }
+
+  .story-heading {
+    margin-bottom: 32px;
+    gap: 12px;
+  }
+
+  .story-heading h2 {
+    font-size: 32px;
+  }
+
+  .story-line {
+    height: 36px;
+    width: 6px;
+  }
+
+  /* HIDE desktop version */
+  .desktop-story {
+    display: none;
+  }
+
+  /* SHOW mobile/tablet version */
+  .mobile-story-content {
+    display: block;
+  }
+
+  .mobile-story-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .story-image-container img {
+    height: 290px;
+    border-radius: 0 30px 0 30px;
+  }
+
+  .first-letter-mobile p:first-child::first-letter {
+    font-size: 48px;
+  }
+
+  .story-icon {
+    font-size: 32px !important;
+  }
+
+  .story-icon-top-left {
+    top: -10px;
+    left: 26px ;
+    font-size: 70px !important;
+     z-index: 1 !important;
+  }
+
+  .story-icon-bottom-right {
+    bottom: 40px;
+    right: 10px;
+  }
+
+  .mobile-image {
+    margin-bottom: 28px;
+  }
+}
+
+/* ============================================ */
+/* SMALL MOBILE (max-width: 480px)              */
+/* ============================================ */
+@media (max-width: 480px) {
+  .story-life {
+    padding: 50px 16px;
+  }
+
+  .story-heading h2 {
+    font-size: 28px;
+  }
+
+  .story-line {
+    height: 32px;
+    width: 5px;
+  }
+
+  .mobile-story-text p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .story-image-container img {
+    height: 240px;
+    border-radius: 0 25px 0 25px;
+    object-fit: contain;
+  }
+
+  .first-letter-mobile p:first-child::first-letter {
+    font-size: 42px;
+  }
+
+  /* .story-icon {
+    font-size: 28px !important;
+  } */
+
+  /* .story-icon-top-left {
+    top: -14px;
+    left: -14px;
+  }
+
+  .story-icon-bottom-right {
+    bottom: -14px;
+    right: -14px;
+  } */
+
+  .mobile-image {
+    margin-bottom: 22px;
+  }
+}
+
+
+/* ===== DESKTOP ONLY - SPIN + SCALE HOVER EFFECT FOR ICONS ===== */
+
+@media (min-width: 1025px) {
+
+  /* Both icons get smooth transition */
+  .story-icon {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Top-left icon hover effect - spin 180° + scale */
+  .story-icon-top-left:hover {
+    transform: rotate(180deg) scale(1.1);
+    color: #1d7a62;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* Bottom-right icon hover effect - spin -180° + scale */
+  .story-icon-bottom-right:hover {
+    transform: rotate(-180deg) scale(1.1);
+    color: #1d7a62;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+
+/* ===============================
+   COACHING OPTIONS SECTION
+================================= */
+.coaching-options {
+  width: 100%;
+  padding: 90px 20px;
+  background: #fffafa;
+}
+
+.coaching-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Heading Left Side */
+.coaching-heading-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  margin-bottom: 55px;
+}
+
+.coaching-line {
+  width: 8px;
+  height: 60px;
+  background: #000;
+  border-radius: 999px;
+}
+
+.coaching-heading-wrap h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 10PX;
+}
+
+/* Grid */
+.coaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+  align-items: stretch;
+}
+
+/* Card */
+.coaching-card {
+  position: relative;
+  background: #ebf4f2;
+  border-radius: 42px;
+  padding: 85px 34px 38px;
+  min-height: 100%;
+  transition: all 0.3s ease;
+}
+
+.coaching-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Rounded Badge */
+.coaching-badge {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #596669;
+  padding: 16px 28px;
+  min-width: 78%;
+  border-radius: 100px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.coaching-badge h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* MAIN LIST - Star/Diamond bullet */
+.coaching-card ul {
+  margin: 0;
+  padding-left: 24px;
+  list-style: none;
+}
+
+.coaching-card>ul>li {
+  font-family: "Rosario", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #111;
+  margin-bottom: 18px;
+  position: relative;
+  padding-left: 8px;
+}
+
+/* Main bullet = ✦ */
+.coaching-card>ul>li::before {
+  content: "✦";
+  color: #2aaa8a;
+  font-size: 16px;
+  position: absolute;
+  left: -20px;
+  top: 2px;
+}
+
+/* NESTED LIST - Different bullet (dot) */
+.inner-list {
+  margin-top: 12px !important;
+  padding-left: 22px !important;
+  list-style: none;
+}
+
+.inner-list li {
+  font-size: 17px !important;
+  margin-bottom: 10px !important;
+  position: relative;
+  padding-left: 8px;
+}
+
+/* Nested bullet = • (dot) - DIFFERENT from main */
+.inner-list li::before {
+  /* content: "•"; */
+  content: "▹";
+  color: #2aaa8a;
+  font-size: 18px;
+  position: absolute;
+  left: -18px;
+  top: 0px;
+}
+
+/* ===============================
+   TABLET (max-width: 1024px)
+================================= */
+@media (max-width: 1024px) {
+  .coaching-options {
+    padding: 75px 24px;
+  }
+
+  .coaching-heading-wrap {
+    gap: 14px;
+    margin-bottom: 45px;
+  }
+
+  .coaching-line {
+    width: 7px;
+    height: 48px;
+  }
+
+  .coaching-heading-wrap h2 {
+    font-size: 40px;
+  }
+
+  .coaching-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .coaching-badge {
+    min-width: 70%;
+  }
+
+  .coaching-badge h3 {
+    font-size: 24px;
+  }
+
+  .coaching-card {
+    padding: 78px 30px 34px;
+  }
+
+  .coaching-card>ul>li {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .inner-list li {
+    font-size: 16px !important;
+  }
+}
+
+/* ===============================
+   MOBILE (max-width: 767px)
+================================= */
+@media (max-width: 767px) {
+  .coaching-options {
+    padding: 60px 16px;
+  }
+
+  .coaching-heading-wrap {
+    gap: 12px;
+    margin-bottom: 38px;
+  }
+
+  .coaching-line {
+    width: 6px;
+    height: 36px;
+  }
+
+  .coaching-heading-wrap h2 {
+    font-size: 32px;
+  }
+
+  .coaching-grid {
+    gap: 60px;
+  }
+
+  .coaching-card {
+    border-radius: 32px;
+    padding: 72px 22px 28px;
+  }
+
+  .coaching-badge {
+    min-width: 88%;
+    padding: 12px 18px;
+    top: -22px;
+  }
+
+  .coaching-badge h3 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .coaching-card ul {
+    padding-left: 20px;
+  }
+
+  .coaching-card>ul>li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .coaching-card>ul>li::before {
+    font-size: 14px;
+    left: -18px;
+    top: 2px;
+  }
+
+  .inner-list {
+    padding-left: 18px !important;
+  }
+
+  .inner-list li {
+    font-size: 15px !important;
+  }
+
+  .inner-list li::before {
+    font-size: 16px;
+    left: -16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .coaching-options {
+    padding: 50px 16px;
+  }
+
+  .coaching-heading-wrap h2 {
+    font-size: 28px;
+  }
+
+  .coaching-line {
+    width: 5px;
+    height: 32px;
+  }
+
+  .coaching-badge h3 {
+    font-size: 16px;
+  }
+
+  .coaching-card>ul>li {
+    font-size: 15px;
+  }
+
+  .inner-list li {
+    font-size: 14px !important;
+  }
+}
+
+
+/* ===================================
+   WHAT WE WORK ON
+=================================== */
+.kahal-work {
+  width: 100%;
+  background: #edf4f2;
+  padding: 90px 20px;
+  overflow: hidden;
+}
+
+.kahal-container {
+  max-width: 1320px;
+  margin: auto;
+}
+
+/* ===== HEADING - UPDATED: Line only for H2 ===== */
+.kahal-heading {
+  margin-bottom: 55px;
+}
+
+.kahal-heading-line {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.kahal-line {
+  width: 8px;
+  height: 60px;
+  background: #000;
+  border-radius: 999px;
+}
+
+.kahal-heading-line h2 {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #000;
+}
+
+.kahal-subheading {
+  font-family: "Rosario", sans-serif;
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+  padding-left: 26px;
+  /* Aligns with H2 text (8px line + 18px gap = 26px) */
+}
+
+/* Layout - NO CHANGES */
+.kahal-layout {
+  position: relative;
+  width: 100%;
+  min-height: 930px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Image - NO CHANGES */
+.kahal-image-wrap {
+  position: absolute;
+  left: 40px;
+  top: 35px;
+  width: 600px;
+}
+
+.kahal-image-wrap img {
+  width: 100%;
+  display: block;
+}
+
+/* Text Layer - NO CHANGES */
+.kahal-points {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Common Point - NO CHANGES */
+.point {
+  position: absolute;
+  max-width: 360px;
+}
+
+.point-text h3 {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #000;
+}
+
+.point-text p {
+  font-family: "Rosario", sans-serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #111;
+}
+
+/* ===== YOUR EXACT POSITIONS - NO CHANGES ===== */
+.point-1 {
+  top: 15px;
+  left: 160px;
+}
+
+.point-2 {
+  top: 130px;
+  left: 340px;
+}
+
+.point-3 {
+  top: 250px;
+  left: 520px;
+  max-width: 410px;
+}
+
+.point-4 {
+  top: 440px;
+  left: 640px;
+  max-width: 430px;
+}
+
+.point-5 {
+  top: 700px;
+  left: 620px;
+  max-width: 360px;
+}
+
+/* ===== KAHAL METHOD TEXT ON IMAGE - NO CHANGES ===== */
+.kahal-method-text {
+  position: absolute;
+  left: 5px !important;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.kahal-method-text span {
+  font-family: "Ubuntu", sans-serif;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.08;
+  color: #000;
+}
+
+/* ===================================
+   TABLET - NO POSITION CHANGES
+=================================== */
+@media(max-width:1024px) {
+  .kahal-work {
+    padding: 70px 20px;
+    height: 95vh;
+  }
+
+  .kahal-heading-line {
+    gap: 14px;
+  }
+
+  .kahal-line {
+    width: 7px;
+    height: 48px;
+  }
+
+  .kahal-heading-line h2 {
+    font-size: 40px;
+  }
+
+  .kahal-subheading {
+    font-size: 18px;
+    padding-left: 21px;
+    /* 7px line + 14px gap = 21px */
+  }
+
+  .kahal-layout {
+    min-height: 760px;
+  }
+
+  .kahal-image-wrap {
+    width: 620px;
+    left: -20px;
+  }
+
+  .point {
+    max-width: 270px;
+  }
+
+  .point-text h3 {
+    font-size: 20px;
+  }
+
+  .point-text p {
+    font-size: 14px;
+  }
+
+  /* YOUR TABLET POSITIONS - KEPT AS IS */
+  .point-1 {
+    top: 20px;
+    left: 110px;
+  }
+
+  .point-2 {
+    top: 130px;
+    left: 290px;
+  }
+
+  .point-3 {
+    top: 250px;
+    left: 470px;
+    max-width: 300px;
+  }
+
+  .point-4 {
+    top: 450px;
+    left: 590px;
+    max-width: 320px;
+  }
+
+  .point-5 {
+    top: 710px;
+    left: 580px;
+    max-width: 260px;
+  }
+
+  .kahal-method-text span {
+    font-size: 28px;
+  }
+
+  /* ===== KAHAL METHOD TEXT ON IMAGE - NO CHANGES ===== */
+.kahal-method-text {
+  left: 25px !important;
+  top: 52%;
+ 
+}
+}
+
+/* ===================================
+   MOBILE - NO POSITION CHANGES
+=================================== */
+@media(max-width:767px) {
+  .kahal-work {
+    padding: 60px 15px;
+    height: 90vh;
+  }
+
+  .kahal-heading-line {
+    gap: 12px;
+  }
+
+  .kahal-line {
+    width: 6px;
+    height: 36px;
+  }
+
+  .kahal-heading-line h2 {
+    font-size: 28px;
+  }
+
+  .kahal-subheading {
+    font-size: 16px;
+    padding-left: 18px;
+    /* 6px line + 12px gap = 18px */
+    margin-top: 8px;
+  }
+
+  .kahal-layout {
+    min-height: 560px;
+  }
+
+  .kahal-image-wrap {
+    width: 250px;
+    left: -20px;
+  }
+
+  .point {
+    max-width: 150px;
+  }
+
+  .point-text h3 {
+    font-size: 11.5px;
+    margin-bottom: 4px;
+  }
+
+  .point-text p {
+    font-size: 9.5px;
+    line-height: 1.35;
+  }
+
+  /* YOUR MOBILE POSITIONS - KEPT AS IS */
+  .point-1 {
+    top: 15px;
+    left: 30px;
+  }
+
+  .point-2 {
+    top: 70px;
+    left: 110px;
+  }
+
+  .point-3 {
+    top: 125px;
+    left: 180px;
+    max-width: 145px;
+  }
+
+  .point-4 {
+    top: 200px;
+    left: 225px;
+    max-width: 150px;
+  }
+
+  .point-5 {
+    top: 310px;
+    left: 220px;
+    max-width: 145px;
+  }
+
+  .kahal-method-text span {
+    font-size: 11px;
+  }
+
+  /* ===== KAHAL METHOD TEXT ON IMAGE - NO CHANGES ===== */
+.kahal-method-text {
+  
+  left: 15px !important;
+  top: 51%;
+ 
+}
+}
+
+/* ===================================
+   FULL UPDATED APPROACH SECTION CSS
+   Desktop: Split layout
+   Tablet & Mobile: Single paragraph flow
+=================================== */
+
+.approach-section {
+  width: 100%;
+  background: #fffafa;
+  padding: 90px 20px;
+}
+
+.approach-container {
+  max-width: 1320px;
+  margin: auto;
+}
+
+/* ===== Helper Classes ===== */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ===== HEADING ===== */
+.approach-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.approach-line {
+  width: 8px;
+  height: 60px;
+  background: #000;
+  border-radius: 999px;
+}
+
+.approach-heading h2 {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  line-height: 1.1;
+}
+
+/* ===== DESKTOP LAYOUT (default) ===== */
+.approach-box {
+  position: relative;
+  min-height: 480px;
+  width: 100%;
+}
+
+/* Background Card */
+.approach-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 110px;
+  background: #ebf4f2;
+  border-radius: 45px;
+  z-index: 1;
+}
+
+/* Image */
+.approach-image {
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  width: 620px;
+  z-index: 3;
+}
+
+.approach-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Top Right Text */
+.approach-top-text {
+  position: relative;
+  z-index: 5;
+  margin-left: 670px;
+  max-width: 430px;
+  padding-top: 55px;
+}
+
+.approach-top-text p {
+  font-family: "Rosario", sans-serif;
+  margin: 0;
+  margin-top: 80px;
+  font-size: 19px;
+  line-height: 1.75;
+  color: #000;
+}
+
+/* Bottom Left Text */
+.approach-bottom-text {
+  position: absolute;
+  left: 350px;
+  bottom: 80px;
+  max-width: 800px;
+  z-index: 5;
+}
+
+.approach-bottom-text p {
+  font-family: "Rosario", sans-serif;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #000;
+}
+
+/* Content Box */
+.approach-content-box {
+  width: 100%;
+  margin-top: 35px;
+  background: #ebf4f2;
+  border-radius: 38px;
+  padding: 45px 38px;
+}
+
+.approach-content-box p {
+  font-family: "Rosario", sans-serif;
+  margin: 0 0 22px;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #000;
+}
+
+.approach-content-box ul {
+  margin: 0 0 22px 18px;
+  padding: 0;
+}
+
+.approach-content-box ul li {
+  font-family: "Rosario", sans-serif;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #000;
+}
+
+/* ===================================
+   TABLET VIEW (max-width: 1024px)
+   Single column, one complete paragraph
+=================================== */
+@media (max-width: 1024px) {
+
+  .approach-section {
+    padding: 70px 20px;
+  }
+
+  .approach-heading {
+    gap: 14px;
+    margin-bottom: 35px;
+  }
+
+  .approach-line {
+    width: 7px;
+    height: 48px;
+  }
+
+  .approach-heading h2 {
+    font-size: 40px;
+  }
+
+  /* Hide desktop split text */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Show mobile single paragraph */
+  .mobile-only {
+    display: block;
+  }
+
+  /* Reset .approach-box to normal flow */
+  .approach-box {
+    position: relative;
+    min-height: auto;
+    width: 100%;
+    background: #ebf4f2;
+    border-radius: 38px;
+    padding: 30px 28px;
+  }
+
+  /* Hide the pseudo-element background */
+  .approach-box::before {
+    display: none;
+  }
+
+  /* Image becomes normal block */
+  .approach-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 25px auto;
+    z-index: auto;
+  }
+
+  /* Mobile text styling */
+  .approach-mobile-text {
+    position: relative;
+    z-index: auto;
+  }
+
+  .approach-mobile-text p {
+    font-family: "Rosario", sans-serif;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #000;
+    text-align: justify;
+  }
+
+  /* Content box adjustments */
+  .approach-content-box {
+    margin-top: 30px;
+    padding: 35px 28px;
+    border-radius: 30px;
+  }
+
+  .approach-content-box p,
+  .approach-content-box ul li {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+/* ===================================
+   MOBILE VIEW (max-width: 767px)
+=================================== */
+@media (max-width: 767px) {
+
+  .approach-section {
+    padding: 50px 15px;
+  }
+
+  .approach-heading {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .approach-line {
+    width: 6px;
+    height: 36px;
+  }
+
+  .approach-heading h2 {
+    font-size: 28px;
+  }
+
+  .approach-box {
+    padding: 20px 18px;
+    border-radius: 28px;
+  }
+
+  .approach-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .approach-mobile-text p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .approach-content-box {
+    margin-top: 22px;
+    padding: 24px 18px;
+    border-radius: 24px;
+    text-align: justify;
+  }
+
+  .approach-content-box p,
+  .approach-content-box ul li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .approach-content-box p {
+    margin-bottom: 18px;
+  }
+}

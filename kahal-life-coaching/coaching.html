@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Kahal Life Coaching</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo/favicon.png">
+
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/coaching.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=asterisk" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rosario:ital,wght@0,300..700;1,300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-logo">
+                Kahal Life Coaching
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link active">HOME</a></li>
+                <li><a href="coaching.html" class="nav-link">COACHING</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="navbar-hamburger">
+                <div class="background">
+                    <button class="menu__icon" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html" class="mobile-nav-link active">HOME</a></li>
+                <li><a href="coaching.html" class="mobile-nav-link">COACHING</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- COACHING HERO SECTION -->
+    <section class="coaching-hero">
+
+        <img class="coaching-hero-bg-img coaching-hero-bg-topright" src="assets/images/coaching/right.svg" alt=""
+            aria-hidden="true" />
+        <img class="coaching-hero-bg-img coaching-hero-bg-leftcenter" src="assets/images/coaching/left.svg" alt=""
+            aria-hidden="true" />
+
+        <!-- SPARKLES SVG (same style, page-specific) -->
+        <svg class="coaching-hero-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 1440 900"
+            preserveAspectRatio="xMidYMid slice">
+            <g transform="translate(120, 210)" fill="#2aaa8a">
+                <g class="coaching-sparkle coaching-sparkle-1">
+                    <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+                </g>
+            </g>
+            <g transform="translate(1200, 210)" fill="#2aaa8a">
+                <g class="coaching-sparkle coaching-sparkle-2">
+                    <path d="M0,-11 C0,-2.5 -2.5,0 -11,0 C-2.5,0 0,2.5 0,11 C0,2.5 2.5,0 11,0 C2.5,0 0,-2.5 0,-11Z" />
+                </g>
+            </g>
+            <g transform="translate(1120, 530)" fill="#2aaa8a">
+                <g class="coaching-sparkle coaching-sparkle-3">
+                    <path d="M0,-12 C0,-2.8 -2.8,0 -12,0 C-2.8,0 0,2.8 0,12 C0,2.8 2.8,0 12,0 C2.8,0 0,-2.8 0,-12Z" />
+                </g>
+            </g>
+            <g transform="translate(260, 730)" fill="#2aaa8a">
+                <g class="coaching-sparkle coaching-sparkle-4">
+                    <path d="M0,-10 C0,-2.3 -2.3,0 -10,0 C-2.3,0 0,2.3 0,10 C0,2.3 2.3,0 10,0 C2.3,0 0,-2.3 0,-10Z" />
+                </g>
+            </g>
+        </svg>
+
+        <div class="coaching-hero-content">
+            <h1 class="coaching-hero-headline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+                EMPOWERING YOU<br>
+                TO DESIGN THE LIFE<br>
+                YOU DESERVE
+            </h1>
+            <p class="coaching-hero-sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                Whether you're seeking clarity, confidence, or a complete<br>
+                life transformation, I'll always be there for you.
+            </p>
+            <button class="coaching-hero-btn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
+                onclick="window.open('https://calendly.com/kahallifecoaching/30min', '_blank')">
+                <span class="coaching-btn-text">CLAIM YOUR FREE SESSION</span>
+                <span class="coaching-btn-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="story-life">
+        <div class="story-container">
+
+            <!-- Heading with vertical line -->
+            <div class="story-heading" data-aos="fade-right" data-aos-duration="800">
+                <span class="story-line"></span>
+                <h2>Story Of My Life</h2>
+            </div>
+
+            <!-- ===== DESKTOP VERSION (split layout - 2 columns) ===== -->
+            <div class="story-grid desktop-story">
+
+                <!-- Left Top Text -->
+                <div class="story-box story-text first-letter" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="100">
+                    <p>
+                        My path into this work began when my child's health became
+                        critical. The edical system I had trusted could no longer provide
+                        the answers we needed, and life suddenly shifted into survival
+                        mode. I found myself navigating fear, exhaustion, and the
+                        overwhelming responsibility of caring for my child while trying to
+                        hold myself together. On the outside, I was functioning. On the
+                        inside, I was carrying more than I had words for. In that season of
+                        uncertainty, everything slowed down - but everything felt louder
+                        internally. I began to notice something deeper happening within
+                        me. I wasn't only responding to the crisis, I was being confronted
+                        with long-held patterns I had never fully questioned -
+                        overthinking, control, emotional suppression, and the need to
+                        always be strong. I realized I wasn't just navigating circumstances,
+                        I was also navigating myself. 
+                    </p>
+                </div>
+
+                <!-- Right Image -->
+                <div class="story-box story-image-wrapper" data-aos="fade-left" data-aos-duration="800"
+                    data-aos-delay="150">
+                    <div class="story-image-container">
+                        <span class="material-symbols-outlined story-icon story-icon-top-left">
+                            asterisk
+                        </span>
+                        <img src="/assets/images/coaching/story.svg" alt="Story Image">
+                        <span class="material-symbols-outlined story-icon story-icon-bottom-right">
+                            asterisk
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Left Bottom Text -->
+                <div class="story-box story-text order-text-2" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="200">
+                    <p>
+                        As I began to turn inward, I started to understand the connection between my thoughts,
+                        emotions, and lived experiences. I saw how easily I had been
+                        moving through life on autopilot - reacting, holding, and pushing
+                        through without ever pausing to check in with myself. Through
+                        reflection and emotional awareness, I slowly began to shift that
+                        pattern. Not by changing everything at once, but by learning to
+                        pause, observe, and respond instead of react. That became the
+                        beginning of reconnecting with myself. I didn't become a life
+                        coach because I had everything figured out. It's because I
+                        understand what it feels like to be overwhelmed but still expected
+                        to hold everything together, to feel disconnected while showing
+                        up for everyone else, and to quietly crave clarity, peace, and
+                        direction without knowing how to access it.
+                    </p>
+                </div>
+
+                <!-- Right Bottom Text -->
+                <div class="story-box story-text order-text-3" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="250">
+                    <p>
+                        And I also know what changes when you begin to come back to yourself.
+                        Today, I support women who feel emotionally drained, overwhelmed, or
+                        stuck in cycles of self-doubt and overthinking. Through life coaching, I
+                        help you quiet internal overwhelm, understand your emotional and
+                        thought patterns, reconnect with clarity and inner stability, and build selftrust through
+                        aligned action. This is not about becoming someone new. It
+                        is about returning to yourself. I don't believe you are broken. I believe you
+                        are carrying too much, for too long, without enough space to hear yourself
+                        clearly. And I believe clarity, confidence, and emotional steadiness are not
+                        things you chase - they are things you return to when you reconnect with
+                        yourself. If you are in a season where you feel overwhelmed, stuck, or
+                        unsure of yourself, you do not have to navigate it alone
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ===== MOBILE/TABLET VERSION (single continuous flow) ===== -->
+            <div class="mobile-story-content">
+
+                <!-- Image first -->
+                <div class="story-image-wrapper mobile-image" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="100">
+                    <div class="story-image-container">
+                        <span class="material-symbols-outlined story-icon story-icon-top-left">
+                            asterisk
+                        </span>
+                        <img src="/assets/images/coaching/story.svg" alt="Story Image">
+                        <span class="material-symbols-outlined story-icon story-icon-bottom-right">
+                            asterisk
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Full story text with drop cap on first paragraph -->
+                <div class="mobile-story-text first-letter-mobile" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="150">
+                    <p>
+                        My path into this work began when my child's health became critical. The medical system I had
+                        trusted could no longer provide the answers we needed, and life suddenly shifted into survival
+                        mode. I found myself navigating fear, exhaustion, and the overwhelming responsibility of caring
+                        for my child while trying to hold myself together. On the outside, I was functioning. On the
+                        inside, I was carrying more than I had words for.
+                    </p>
+                    <p>
+                        In that season of uncertainty, everything slowed down-but everything felt louder internally. I
+                        began to notice something deeper happening within me. I wasn't only responding to the crisis, I
+                        was being confronted with long-held patterns I had never fully questioned-overthinking, control,
+                        emotional suppression, and the need to always be strong. I realized I wasn't just navigating
+                        circumstances, I was also navigating myself.
+                    </p>
+                    <p>
+                        As I began to turn inward, I started to understand the connection between my thoughts, emotions,
+                        and lived experiences. I saw how easily I had been moving through life on autopilot-reacting,
+                        holding, and pushing through without ever pausing to check in with myself. Through reflection
+                        and emotional awareness, I slowly began to shift that pattern. Not by changing everything at
+                        once, but by learning to pause, observe, and respond instead of react. That became the beginning
+                        of reconnecting with myself.
+                    </p>
+                    <p>
+                        I didn't become a life coach because I had everything figured out. It's because I understand
+                        what it feels like to be overwhelmed but still expected to hold everything together, to feel
+                        disconnected while showing up for everyone else, and to quietly crave clarity, peace, and
+                        direction without knowing how to access it. And I also know what changes when you begin to come
+                        back to yourself.
+                    </p>
+                    <p>
+                        Today, I support women who feel emotionally drained, overwhelmed, or stuck in cycles of
+                        self-doubt and overthinking. Through life coaching, I help you quiet internal overwhelm,
+                        understand your emotional and thought patterns, reconnect with clarity and inner stability, and
+                        build self-trust through aligned action. This is not about becoming someone new. It is about
+                        returning to yourself.
+                    </p>
+                    <p>
+                        I don't believe you are broken. I believe you are carrying too much, for too long, without
+                        enough space to hear yourself clearly. And I believe clarity, confidence, and emotional
+                        steadiness are not things you chase-they are things you return to when you reconnect with
+                        yourself.
+                    </p>
+                    <p>
+                        If you are in a season where you feel overwhelmed, stuck, or unsure of yourself, you do not have
+                        to navigate it alone.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================
+     WHAT WE WORK ON SECTION
+=================================== -->
+    <section class="kahal-work">
+        <div class="kahal-container">
+
+            <!-- Heading - UPDATED: Line only for H2 -->
+            <div class="kahal-heading" data-aos="fade-right" data-aos-duration="800">
+                <div class="kahal-heading-line">
+                    <span class="kahal-line"></span>
+                    <h2>What we work on</h2>
+                </div>
+                <p class="kahal-subheading">A simple, powerful process to bring you back to yourself.</p>
+            </div>
+
+            <!-- Main Graphic Area -->
+            <div class="kahal-layout">
+
+                <!-- Image -->
+                <div class="kahal-image-wrap" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <img src="assets/images/coaching/method.svg" alt="Kahal Method Graphic">
+                    <div class="kahal-method-text">
+                        <span>THE</span>
+                        <span>KAHAL</span>
+                        <span>METHOD</span>
+                    </div>
+                </div>
+
+                <!-- Text Around Image -->
+                <div class="kahal-points">
+
+                    <!-- 1 - Know Yourself -->
+                    <div class="point point-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+                        <div class="point-text">
+                            <h3>Know Yourself</h3>
+                            <p>
+                                Understand who you are beneath the noise.
+                                Reconnect with your values, emotions, and truth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2 - Align Your Life -->
+                    <div class="point point-2" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+                        <div class="point-text">
+                            <h3>Align Your Life</h3>
+                            <p>
+                                Shift out of people-pleasing and into alignment.
+                                Make decisions that reflect you.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3 - Heal What's Holding You Back -->
+                    <div class="point point-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+                        <div class="point-text">
+                            <h3>Heal What's Holding You Back</h3>
+                            <p>
+                                Release emotional blocks, limiting beliefs,
+                                and past patterns. Create space for something new.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4 - Activate Your Confidence -->
+                    <div class="point point-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+                        <div class="point-text">
+                            <h3>Activate Your Confidence</h3>
+                            <p>
+                                Build self-trust through small, aligned action.
+                                Confidence becomes something you live.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 5 - Live Fully -->
+                    <div class="point point-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+                        <div class="point-text">
+                            <h3>Live Fully</h3>
+                            <p>
+                                Step into a life that feels grounded,
+                                intentional, and deeply aligned.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- COACHING OPTIONS SECTION -->
+    <section class="coaching-options">
+        <div class="coaching-container">
+
+            <!-- Heading -->
+            <div class="coaching-heading-wrap" data-aos="fade-right" data-aos-duration="800">
+                <span class="coaching-line"></span>
+                <h2>Coaching Options</h2>
+            </div>
+
+            <!-- Cards -->
+            <div class="coaching-grid">
+
+                <!-- Card 1 -->
+                <div class="coaching-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="coaching-badge">
+                        <h3>1:1 PRIVATE COACHING</h3>
+                    </div>
+
+                    <ul>
+                        <li>A flexible, ongoing coaching space designed for personalized support as you navigate life in
+                            real time.</li>
+                        <li>This option is ideal if you are not looking for a structured program, but instead want
+                            consistent guidance, clarity, and support as your needs evolve.</li>
+                        <li>Together, we focus on what is most present for you - whether that is emotional overwhelm,
+                            decision-making, self-doubt, relationships, or feeling stuck in certain areas of your life.
+                        </li>
+                        <li>Each session is centered around helping you slow down, gain clarity, and reconnect with
+                            yourself so you can move forward with more confidence and self-trust.</li>
+                        <li>This is a supportive space for reflection, grounding, and real-time coaching as life
+                            unfolds.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="coaching-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="coaching-badge">
+                        <h3>8 WEEK 1:1 COACHING PROGRAM</h3>
+                    </div>
+
+                    <ul>
+                        <li>A structured, high-touch transformation journey designed to move you from overwhelm and
+                            self-doubt into clarity, confidence, and aligned action.</li>
+                        <li>This is a focused 8-week experience where we work closely together using the Kahal Method to
+                            help you understand your internal patterns, release emotional blocks, and rebuild trust in
+                            yourself.</li>
+                        <li>Each week is intentionally designed to build on the last, guiding you through a clear
+                            progression of awareness, emotional release, and practical integration.</li>
+                        <li>This program includes:
+                            <ul class="inner-list">
+                                <li>Weekly private 1:1 coaching sessions</li>
+                                <li>Between-session support for guidance and integration</li>
+                                <li>Personalized worksheets and reflection exercises</li>
+                                <li>Structured support to help you apply insights in real life</li>
+                            </ul>
+                        </li>
+                        <li>This is not just about gaining clarity in session - it is about creating real, lived change
+                            in how you think, choose, and show up in your everyday life.</li>
+                        <li>By the end of the 8 weeks, you will have greater emotional awareness, stronger self-trust,
+                            and a clearer sense of direction rooted in alignment-not overwhelm.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===================================
+     MY COACHING APPROACH
+=================================== -->
+    <section class="approach-section">
+        <div class="approach-container">
+
+            <!-- Heading -->
+            <div class="approach-heading" data-aos="fade-right" data-aos-duration="800">
+                <span class="approach-line"></span>
+                <h2>My Coaching Approach</h2>
+            </div>
+
+            <!-- TOP BOX -->
+            <div class="approach-box">
+
+                <!-- Image -->
+                <div class="approach-image" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <img src="assets/images/coaching/approach.svg" alt="Coaching Approach">
+                </div>
+
+                <!-- DESKTOP VERSION: Two separate text blocks -->
+                <div class="approach-top-text desktop-only" data-aos="fade-left" data-aos-duration="800"
+                    data-aos-delay="200">
+                    <p>
+                        My coaching is rooted in one core belief:
+                        you don't need to be fixed-you need to be
+                        reconnected with yourself. Most people try to change their lives by
+                    </p>
+                </div>
+
+                <div class="approach-bottom-text desktop-only" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="300">
+                    <p>
+                        focusing only on external goals,
+                        surface-level motivation, or quick mindset shifts.
+                        While those can create temporary movement, they rarely
+                        create lasting change. Real transformation happens when
+                        you understand what is driving your thoughts, emotions,
+                        and patterns beneath the surface.
+                    </p>
+                </div>
+
+                <!-- MOBILE/TABLET VERSION: One single complete paragraph -->
+                <div class="approach-mobile-text mobile-only" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="200">
+                    <p>
+                        My coaching is rooted in one core belief: you don't need to be fixed - you need to be
+                        reconnected with yourself. Most people try to change their lives by focusing only on external
+                        goals,
+                        surface-level motivation, or quick mindset shifts. While those can create temporary movement,
+                        they rarely
+                        create lasting change. Real transformation happens when you understand what is driving your
+                        thoughts, emotions,
+                        and patterns beneath the surface.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- NEW LOWER CONTENT BOX -->
+            <div class="approach-content-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    My approach is a blend of structured life coaching and deep internal awareness work.
+                    Together, we focus on slowing down the internal noise so you can see yourself clearly again -
+                    how you think, how you respond, and what patterns are quietly shaping your life.
+                </p>
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    From there, we begin to shift them intentionally.
+                </p>
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                    This is not about pushing harder or becoming someone new.
+                    It's about building self-awareness, emotional clarity, and self-trust so you can start making
+                    decisions from alignment instead of overwhelm.
+                </p>
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                    The foundation of my work is the Kahal Method, which guides this transformation in a simple,
+                    grounded process:
+                </p>
+
+                <ul data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                    <li>Understanding yourself more deeply</li>
+                    <li>Releasing patterns that keep you stuck</li>
+                    <li>Rebuilding trust in your inner voice</li>
+                    <li>Taking aligned, intentional action in your life</li>
+                </ul>
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+                    Each session is designed to create both reflection and forward movement -
+                    so insight is never just awareness, it becomes lived change.
+                </p>
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+                    My role is to help you slow down, see clearly, and reconnect with the part of you that already knows
+                    what you need.
+                </p>
+
+                <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="900">
+                    This work is not about quick fixes.<br>
+                    It is about creating a steady internal foundation you can live from.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WAVE ABOVE FOOTER - ONLY FOR OTHER 2 PAGES -->
+    <div class="footer-wave-top">
+        <svg class="wave-desktop" viewBox="0 0 1440 170" preserveAspectRatio="none">
+            <path
+                d="M0,25 C60,25 95,110 170,110 C245,110 280,25 355,25 C430,25 465,110 540,110 C615,110 650,25 725,25 C800,25 835,110 910,110 C985,110 1020,25 1095,25 C1170,25 1205,110 1280,110 C1355,110 1385,25 1440,25 L1440,0 L0,0 Z">
+            </path>
+        </svg>
+        <svg class="wave-mobile" viewBox="0 0 1440 170" preserveAspectRatio="none">
+            <path
+                d="M0,40 C180,40 220,110 360,110 C500,110 540,40 720,40 C900,40 940,110 1080,110 C1220,110 1260,40 1440,40 L1440,0 L0,0 Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo-wrapper" data-aos="fade-up" data-aos-duration="600">
+                <div class="footer-logo">Kahal Life Coaching</div>
+                <p class="footer-tagline">Empower. Transform. Thrive.</p>
+                <p class="footer-tagline-second">Your journey to clarity begins here.</p>
+            </div>
+
+            <div class="footer-links" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                <a href="index.html" class="footer-nav-link">HOME</a>
+                <a href="coaching.html" class="footer-nav-link">COACHING</a>
+                <a href="contact.html" class="footer-nav-link">CONTACT</a>
+            </div>
+
+            <div class="footer-contact-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <div class="footer-contact">
+                    <!-- <p>
+                        <a href="tel:+18325528111" class="footer-contact-link call">
+                            <i class="fa-solid fa-phone"></i> +1 832-552-8111
+                        </a>
+                    </p> -->
+                    <p>
+                        <a href="mailto:kahallifecoaching@gmail.com" class="footer-contact-link">
+                            <i class="fa-solid fa-envelope"></i> kahallifecoaching@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.instagram.com/kahallifecoaching" target="_blank"
+                            class="footer-contact-link">
+                            <i class="fa-brands fa-instagram"></i> KahalLifeCoaching
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.facebook.com/profile.php?id=61580940513047" target="_blank"
+                            class="footer-contact-link">
+                            <i class="fa-brands fa-facebook-f"></i> Kahal Life Coaching
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                <p>Copyright © 2026 Kahal Life Coaching, All Rights Reserved.<span class="mobilefooterbr"><br></span>
+                    Design and Developed by <a href="https://techorses.com" target="_blank"
+                        class="techorses-link"><strong>Techorses</strong></a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS for scroll animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <script src="/js/coaching.js"></script>
+
+</body>
+
+
+
+
+
+</html>

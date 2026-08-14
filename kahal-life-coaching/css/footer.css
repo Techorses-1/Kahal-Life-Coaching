@@ -1,0 +1,444 @@
+/* ================= FOOTER ================= */
+
+.site-footer {
+    background: #b9d8d1;
+    padding: 50px 20px 10px;
+    font-family: "Rosario", sans-serif;
+    overflow: clip;
+}
+
+/* ===== CONTAINER ===== */
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* ===== LOGO WRAPPER ===== */
+.footer-logo-wrapper {
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-logo-wrapper:hover {
+    transform: scale(1.02);
+    opacity: 0.85;
+}
+
+/* ===== LOGO TEXT ===== */
+.footer-logo {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    color: #000;
+    white-space: nowrap;
+    margin-bottom: 12px;
+}
+
+/* ===== TAGLINES ===== */
+.footer-tagline {
+    font-family: "Rosario", sans-serif;
+    font-size: 14px;
+    color: #2a2a2a;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.footer-tagline-second {
+    font-family: "Rosario", sans-serif;
+    font-size: 13px;
+    color: #3a3a3a;
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* ===== LINKS ===== */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-family: "Rosario", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+}
+
+.footer-links a:hover {
+    transform: translateX(8px);
+    opacity: 0.7;
+}
+
+/* ACTIVE CLASS FOR FOOTER LINKS */
+.footer-links a.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* ===== CONTACT WRAPPER ===== */
+.footer-contact-wrapper {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+/* ===== CONTACT ===== */
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+
+.footer-contact p:first-child {
+    margin-top: 0px;
+    /* Gap for phone - more space */
+}
+
+.footer-contact p {
+    margin: 08px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+
+}
+
+.footer-contact .call {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    /* margin-top: 0 !important;  */
+}
+
+.footer-contact p:hover {
+    transform: translateX(5px);
+}
+
+.footer-contact i {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-contact p:hover i {
+    transform: scale(1.1);
+}
+
+/* Contact Links */
+.footer-contact-link {
+    text-decoration: none;
+    color: #000;
+    font-family: "Rosario", sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-link:hover {
+    color: #000;
+    opacity: 0.7;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.footer-social {
+    display: flex;
+    gap: 18px;
+    justify-content: flex-end;
+}
+
+.footer-social a {
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Default state - black color */
+.footer-social a {
+    color: #000;
+}
+
+/* Instagram hover - original brand color */
+.footer-social a.instagram:hover {
+    color: #E4405F;
+    opacity: 1;
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* Facebook hover - original brand color */
+.footer-social a.facebook:hover {
+    color: #1877F2;
+    opacity: 1;
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* LinkedIn hover - original brand color */
+.footer-social a.linkedin:hover {
+    color: #0A66C2;
+    opacity: 1;
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* YouTube hover - original brand color */
+.footer-social a.youtube:hover {
+    color: #FF0000;
+    opacity: 1;
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* Fallback hover if no specific class */
+.footer-social a:hover {
+    opacity: 0.7;
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* ===== BOTTOM ===== */
+.footer-bottom {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+/* ===== COPY - SINGLE LINE ON DESKTOP ===== */
+.footer-copy p {
+    margin: 0;
+    font-size: 13px;
+    font-family: "Rosario", sans-serif;
+    transition: all 0.3s ease;
+    line-height: 1.5;
+}
+
+.footer-copy p:hover {
+    transform: translateX(3px);
+}
+
+.footer-copy strong {
+    transition: color 0.3s ease;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+/* TECHORSES Link */
+.techorses-link {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.techorses-link:hover {
+    color: #fff;
+    transform: scale(1.02);
+}
+
+.footer-copy strong:hover {
+    color: #fff;
+}
+
+.mobilefooterbr {
+    display: none;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    /* HIDE LINKS */
+    .footer-links {
+        display: none;
+    }
+
+    .footer-contact-wrapper {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+
+    .footer-contact-link {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-logo-wrapper {
+        text-align: center;
+    }
+
+    /* Tablet - copyright 2 lines */
+    .footer-copy p {
+        line-height: 1.6;
+    }
+
+    .footer-copy br {
+        display: none;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+    .site-footer {
+        padding: 40px 0px 25px !important;
+    }
+
+    .footer-container {
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* LOGO TEXT smaller on mobile */
+    .footer-logo {
+        font-size: 1.3rem;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .footer-tagline {
+        font-size: 13px !important;
+    }
+
+    .footer-tagline-second {
+        font-size: 13px !important;
+    }
+
+    .footer-contact p {
+        font-size: 13px !important;
+        justify-content: center;
+        margin: 6px 0;
+    }
+
+    .footer-contact-link {
+        font-size: 13px !important;
+        justify-content: center;
+    }
+
+    .footer-contact i {
+        font-size: 13px !important;
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        font-size: 15px !important;
+    }
+
+    .footer-copy p {
+        font-size: 12px !important;
+        line-height: 1.6;
+    }
+
+    .footer-copy .mobilefooterbr {
+        display: block !important;
+    }
+
+
+    /* Mobile hover adjustments */
+    .footer-contact p:hover {
+        transform: translateX(0);
+    }
+
+    .footer-logo-wrapper:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+    .footer-logo {
+        font-size: 1.1rem;
+    }
+
+    .footer-tagline {
+        font-size: 11px;
+    }
+
+    .footer-tagline-second {
+        font-size: 10px;
+    }
+
+    .footer-contact p {
+        font-size: 11px;
+    }
+
+    .footer-contact-link {
+        font-size: 11px;
+    }
+
+    .footer-social a {
+        font-size: 14px;
+    }
+
+    .footer-copy p {
+        font-size: 10px;
+    }
+
+
+}
+
+
+/* ================= FOOTER TOP WAVE (FOR OTHER 2 PAGES) ================= */
+
+.footer-wave-top {
+  line-height: 0;
+  background: #b9d8d1;
+}
+
+.footer-wave-top svg {
+  width: 100%;
+  height: 110px;
+  display: block;
+}
+
+.footer-wave-top path {
+  fill: #fffaff;
+}
+
+/* Hide mobile wave on desktop, show on mobile */
+.footer-wave-top .wave-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .footer-wave-top .wave-desktop {
+    display: none;
+  }
+  
+  .footer-wave-top .wave-mobile {
+    display: block;
+  }
+  
+  .footer-wave-top svg {
+    height: 85px;
+  }
+}

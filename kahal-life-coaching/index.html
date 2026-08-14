@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kahal Life Coaching</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo/favicon.png">
+
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=asterisk" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rosario:ital,wght@0,300..700;1,300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        Kahal Life Coaching
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="nav-link active">HOME</a></li>
+        <li><a href="coaching.html" class="nav-link">COACHING</a></li>
+        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+      </ul>
+      <div class="navbar-hamburger">
+        <div class="background">
+          <button class="menu__icon" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="index.html" class="mobile-nav-link active">HOME</a></li>
+        <li><a href="coaching.html" class="mobile-nav-link">COACHING</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <!-- ===== BACKGROUND PNG ELEMENTS ===== -->
+    <img class="hero-bg-img hero-bg-topright" src="assets/images/hero/topright.png" alt="" aria-hidden="true" />
+    <img class="hero-bg-img hero-bg-leftcenter" src="assets/images/hero/leftcenter.png" alt="" aria-hidden="true" />
+
+    <!-- ===== SPARKLES SVG ===== -->
+    <svg class="hero-bg-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 1440 900"
+      preserveAspectRatio="xMidYMid slice">
+
+      <g transform="translate(120, 210)" fill="#2aaa8a">
+        <g class="sparkle sparkle-1">
+          <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+        </g>
+      </g>
+
+      <g transform="translate(1200, 210)" fill="#2aaa8a">
+        <g class="sparkle sparkle-2">
+          <path d="M0,-11 C0,-2.5 -2.5,0 -11,0 C-2.5,0 0,2.5 0,11 C0,2.5 2.5,0 11,0 C2.5,0 0,-2.5 0,-11Z" />
+        </g>
+      </g>
+
+      <g transform="translate(1120, 530)" fill="#2aaa8a">
+        <g class="sparkle sparkle-3">
+          <path d="M0,-12 C0,-2.8 -2.8,0 -12,0 C-2.8,0 0,2.8 0,12 C0,2.8 2.8,0 12,0 C2.8,0 0,-2.8 0,-12Z" />
+        </g>
+      </g>
+
+      <g transform="translate(260, 730)" fill="#2aaa8a">
+        <g class="sparkle sparkle-4">
+          <path d="M0,-10 C0,-2.3 -2.3,0 -10,0 C-2.3,0 0,2.3 0,10 C0,2.3 2.3,0 10,0 C2.3,0 0,-2.3 0,-10Z" />
+        </g>
+      </g>
+
+    </svg>
+
+    <div class="hero-content">
+
+      <!-- TOP TEXT -->
+      <p class="top-text" data-aos="fade-down" data-aos-duration="800">
+        I'm <span>Prakruti Patel</span>,<br>
+        founder of Kahal Life Coaching.
+      </p>
+
+      <!-- HEADING -->
+      <div class="hero-heading-wrapper" data-aos="fade-up" data-aos-duration="800">
+        <h1>
+          CLARITY. CONFIDENCE.
+          <span class="line-break">EMOTIONAL FREEDOM.</span>
+        </h1>
+      </div>
+
+      <!-- SIDE + IMAGE SAME ROW -->
+      <div class="hero-side-row">
+
+        <!-- LEFT -->
+        <div class="left-text" data-aos="fade-right" data-aos-duration="800">
+
+          <i class="fa-solid fa-quote-left hero-quote-icon"></i>
+          <p>
+            Life Coaching for<br>
+            Women ready to<br>
+            become unstoppable.
+          </p>
+
+          <div class="count-box">
+            <i class="fa-solid fa-quote-left hero-quote-icon"></i>
+            <h3>20+</h3>
+            <span>
+              Women coached<br>
+              from many walks<br>
+              of life.
+            </span>
+          </div>
+
+        </div>
+
+        <!-- CENTER IMAGE -->
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="1000">
+          <img src="assets/images/hero/heroimage.png" alt="Prakruti Patel">
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right-text" data-aos="fade-left" data-aos-duration="800">
+
+          <i class="fa-solid fa-quote-left hero-quote-icon"></i>
+          <p>
+            Through my signature <strong>Kahal Method</strong>, I guide you away from self-doubt and into a space of
+            clarity, trust, and
+            purposeful action.
+          </p>
+
+          <div class="count-box">
+            <i class="fa-solid fa-quote-left hero-quote-icon"></i>
+            <h3>30 Min</h3>
+            <span>Clarity Call</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- BUTTON -->
+      <button class="cta-btn" data-aos="fade-up" data-aos-duration="800"
+        onclick="window.open('https://calendly.com/kahallifecoaching/30min', '_blank')">
+        <span class="btn-text">Book Free Call</span>
+        <span class="btn-icon">
+          <i class="fas fa-arrow-right"></i>
+        </span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- RECONNECT SECTION -->
+  <section class="reconnect">
+    <div class="reconnect-container">
+      <div class="reconnect-heading" data-aos="fade-right" data-aos-duration="800">
+        <div class="line"></div>
+        <h2>
+          You don't need more advice.<br>
+          You need reconnection.
+        </h2>
+      </div>
+
+      <div class="reconnect-content">
+        <div class="reconnect-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="icon-circle">
+            <img src="assets/images/Reconnect section/icone1.png" alt="icone1">
+          </div>
+          <div>
+            <h3>Right now, you might be:</h3>
+            <ul>
+              <li>Overthinking every decision</li>
+              <li>Feeling stuck or emotionally drained</li>
+              <li>Questioning yourself constantly</li>
+              <li>Carrying the weight of everyone else's needs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reconnect-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="icon-circle">
+            <img src="assets/images/Reconnect section/icone2.png" alt="icone2">
+          </div>
+          <div>
+            <h3>The Kahal Method helps you:</h3>
+            <ul>
+              <li>Reconnect with your inner voice</li>
+              <li>Build real self-trust (not temporary confidence)</li>
+              <li>Move forward with clarity and confidence</li>
+              <li>Feel emotionally lighter and more grounded</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="reconnect-footer" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+        <div class="newstar"><span class="material-symbols-outlined star">asterisk</span></div>
+        <p>This isn't surface-level change. This is deep, lasting transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-img" data-aos="zoom-in-right" data-aos-duration="1000">
+        <img src="assets/images/hero/newabout.png" alt="About">
+        <span class="material-symbols-outlined asterisk a1">asterisk</span>
+        <span class="material-symbols-outlined asterisk a2">asterisk</span>
+        <span class="material-symbols-outlined asterisk a3">asterisk</span>
+      </div>
+
+      <div class="about-content" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <div class="about-heading">
+          <div class="line"></div>
+          <h2>About Me</h2>
+        </div>
+
+        <p>
+          Hi, I’m <b>Prakruti Patel</b> - a <b>mother</b>, and I <b>guide women</b> ready to come back to themselves.
+        </p>
+
+        <p>
+          The <b>Kahal Method</b> is rooted in my personal experience navigating a season of intense family challenges
+          that left me feeling overwhelmed and disconnected from myself. Having walked the path from total self-doubt
+          back to grounded confidence, I understand the weight of losing yourself - and the power of reclaiming your
+          life.
+        </p>
+
+        <p>
+          My approach is simple but powerful:
+          <strong>We don’t fix you. <span class="dektopbr"><br></span>We reconnect you.</strong>
+        </p>
+
+        <p>
+          Because everything you’re searching for already exists within you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-wave">
+    <div class="home-wave__top">
+      <svg class="wave-desktop" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path
+          d="M0,25 C60,25 95,110 170,110 C245,110 280,25 355,25 C430,25 465,110 540,110 C615,110 650,25 725,25 C800,25 835,110 910,110 C985,110 1020,25 1095,25 C1170,25 1205,110 1280,110 C1355,110 1385,25 1440,25 L1440,0 L0,0 Z">
+        </path>
+      </svg>
+      <svg class="wave-mobile" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path
+          d="M0,40 C180,40 220,110 360,110 C500,110 540,40 720,40 C900,40 940,110 1080,110 C1220,110 1260,40 1440,40 L1440,0 L0,0 Z">
+        </path>
+      </svg>
+    </div>
+
+    <div class="home-wave__middle">
+
+      <!-- SPARKLE 1 - small top left -->
+      <svg class="home-wave__star home-wave__star--1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2">
+          <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+        </g>
+      </svg>
+
+      <!-- SPARKLE 2 - big right -->
+      <svg class="home-wave__star home-wave__star--2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2">
+          <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+        </g>
+      </svg>
+
+      <!-- SPARKLE 3 - big left -->
+      <svg class="home-wave__star home-wave__star--3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2">
+          <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+        </g>
+      </svg>
+
+      <!-- SPARKLE 4 - small bottom right -->
+      <svg class="home-wave__star home-wave__star--4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2">
+          <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+        </g>
+      </svg>
+
+      <h2 data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+        You're not lost - you're disconnected from yourself.<br>
+        Let's help you come back home.
+      </h2>
+    </div>
+
+    <div class="home-wave__bottom">
+      <svg class="wave-desktop" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path
+          d="M0,25 C60,25 95,110 170,110 C245,110 280,25 355,25 C430,25 465,110 540,110 C615,110 650,25 725,25 C800,25 835,110 910,110 C985,110 1020,25 1095,25 C1170,25 1205,110 1280,110 C1355,110 1385,25 1440,25 L1440,170 L0,170 Z">
+        </path>
+      </svg>
+      <svg class="wave-mobile" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path
+          d="M0,40 C180,40 220,110 360,110 C500,110 540,40 720,40 C900,40 940,110 1080,110 C1220,110 1260,40 1440,40 L1440,170 L0,170 Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR SECTION -->
+  <section class="who-for">
+    <div class="who-for__container">
+      <div class="who-for__heading" data-aos="fade-right" data-aos-duration="800">
+        <div class="who-for__line"></div>
+        <h2>Who This Is For?</h2>
+      </div>
+
+      <p class="who-for__subtext" data-aos="fade-up" data-aos-duration="600">This work is for you if you are:</p>
+
+      <div class="who-for__grid">
+        <div class="who-for__item two-lines" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+          <span class="material-symbols-outlined who-for__icon">asterisk</span>
+          <p>Feeling stuck in one or more areas of your life</p>
+        </div>
+        <div class="who-for__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <span class="material-symbols-outlined who-for__icon">asterisk</span>
+          <p>Tired of second-guessing yourself</p>
+        </div>
+        <div class="who-for__item two-lines" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+          <span class="material-symbols-outlined who-for__icon">asterisk</span>
+          <p>Ready to do deeper inner work (not just quick fixes)</p>
+        </div>
+        <div class="who-for__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <span class="material-symbols-outlined who-for__icon">asterisk</span>
+          <p>Open to growth, healing, and real change</p>
+        </div>
+        <div class="who-for__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+          <span class="material-symbols-outlined who-for__icon">asterisk</span>
+          <p>Craving clarity and confidence</p>
+        </div>
+        <div class="who-for__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <span class="material-symbols-outlined who-for__icon">asterisk</span>
+          <p>Ready to prioritize yourself without guilt</p>
+        </div>
+      </div>
+
+      <div class="who-for__quote" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+        <i class="fa-solid fa-quote-left who-for__quote-icon who-for__quote-icon--left"></i>
+        <p>You don't need to have it all figured out.<span class="mobilebr"><br></span> You just need to be willing to
+          begin.</p>
+        <i class="fa-solid fa-quote-left who-for__quote-icon who-for__quote-icon--right"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials">
+    <div class="testimonials-container">
+      <div class="testimonials-header" data-aos="fade-up" data-aos-duration="800">
+        <p class="testimonials-subtext">
+          <!-- Every kind word from our clients tells a story of growth, trust,
+        and the journey we've taken together. -->
+        </p>
+        <div class="testimonials-heading">
+          <h2>Testimonials</h2>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="swiper testimonialsSwiper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <!-- Testimonial 1 - Kim Shams (WITH heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Kim Shams</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <h3>First experience with a coach</h3>
+                <p>I wasn't sure what to expect for my first ever coaching session but Prakruti made sure I came
+                  prepared with something to talk about. I need help with my next venture but have been struggling to
+                  really dive into it. Prakruti not only listened to me but she helped me find a solution to the
+                  underlying problem I have been dealing with. She motivated my wants, empowered me, and helped me push
+                  through negative feelings. It was a wonderful first session and I highly recommend Prakruti for anyone
+                  looking for some coaching.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 - Krishna Patel (NO heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Krishna Patel</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <p>I recently had a session with Prakruti Patel, and I'm so grateful for the experience. What stood out
+                  most was her ability to really listen - not just to my words, but to the feelings behind them. She
+                  asked thoughtful questions that helped me uncover clarity I didn't even realize I was missing. The
+                  tools and perspectives she shared were practical, eye-opening, and tailored to exactly what I was
+                  struggling with.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 - Sharni Dhillon (NO heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Sharni Dhillon</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <p>Last Thursday, I had the opportunity to attend a life coaching session with Ms. Prakruti, and it was
+                  quite rejuvenating. She established a friendly, open environment that made it simple to converse and
+                  move the conversation along. She inspired me to come out of my shell and make the commitment to talk
+                  to a new stranger. I came away from the session feeling encouraged, inspired, and equipped to keep
+                  seeking personal development.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 - Geeta Mazumdar (NO heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Geeta Mazumdar</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <p>You have helped me with my fear and insecurity issues. You have handled my queries, and I was amazed
+                  at how you were ready with understanding my questions and also with strategy to help with it. I was
+                  very comfortable opening up my thoughts and loved the strategies to overcome and handle my feelings
+                  and concerns. You are skilled in what you do, and you have a kind heart. Thank you very much.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 - Jennifer Uwo (NO heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Jennifer Uwo</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <p>Last Thursday, I had the opportunity to attend a life coaching session with Ms. Prakruti, and it was
+                  quite rejuvenating. She established a friendly, open environment that made it simple to converse and
+                  move the conversation along. She inspired me to come out of my shell and make the commitment to talk
+                  to a new stranger. I came away from the session feeling encouraged, inspired, and equipped to keep
+                  seeking personal development.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 - Cresta Barton (NO heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Cresta Barton</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <p>I had the opportunity to work with Prakruti through her life coaching services, and I can honestly
+                  say it was a really positive experience. She creates a space where you feel comfortable being open,
+                  but also challenged in a way that helps you actually grow. What stood out most to me is how
+                  intentional and thoughtful she is. I walked away feeling more clear, grounded, and confident in my
+                  next steps. If you're looking for someone who genuinely cares and is invested in helping you move
+                  forward, I definitely recommend working with her.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 7 - Disha Maheta (NO heading) -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div class="card-top">
+                <div class="profile-wrap">
+                  <div class="profile-info">
+                    <h4>Disha Mehta</h4>
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <p>I'm so grateful! Thank you for listening, guiding, and helping me tune into my inner voice. You've
+                  always given me the strength to create real change by changing one habit at a time; whether it's
+                  overcoming procrastination or calming myself in difficult situations. Your tools, such as deep
+                  breathing, journaling, mindful pauses, and small, achievable goal-setting, have helped me feel
+                  grounded, confident, and in control. Thank you for everything you do and beyond!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testimonial-controls">
+          <div class="swiper-button-prev custom-prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="swiper-button-next custom-next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="cta-wave">
+    <div class="cta-wave__top">
+      <svg class="wave-desktop" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path
+          d="M0,25 C60,25 95,110 170,110 C245,110 280,25 355,25 C430,25 465,110 540,110 C615,110 650,25 725,25 C800,25 835,110 910,110 C985,110 1020,25 1095,25 C1170,25 1205,110 1280,110 C1355,110 1385,25 1440,25 L1440,0 L0,0 Z">
+        </path>
+      </svg>
+      <svg class="wave-mobile" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path
+          d="M0,40 C180,40 220,110 360,110 C500,110 540,40 720,40 C900,40 940,110 1080,110 C1220,110 1260,40 1440,40 L1440,0 L0,0 Z">
+        </path>
+      </svg>
+    </div>
+
+    <div class="cta-wave__content" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+
+      <!-- SPARKLES -->
+      <svg class="cta-sparkle cta-sparkle--1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2" opacity="0.85">
+          <path d="M0,-14 C0,-3 -3,0 -14,0 C-3,0 0,3 0,14 C0,3 3,0 14,0 C3,0 0,-3 0,-14Z" />
+        </g>
+      </svg>
+      <svg class="cta-sparkle cta-sparkle--2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2" opacity="0.75">
+          <path d="M0,-11 C0,-2.5 -2.5,0 -11,0 C-2.5,0 0,2.5 0,11 C0,2.5 2.5,0 11,0 C2.5,0 0,-2.5 0,-11Z" />
+        </g>
+      </svg>
+      <svg class="cta-sparkle cta-sparkle--3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2" opacity="0.75">
+          <path d="M0,-12 C0,-2.8 -2.8,0 -12,0 C-2.8,0 0,2.8 0,12 C0,2.8 2.8,0 12,0 C2.8,0 0,-2.8 0,-12Z" />
+        </g>
+      </svg>
+      <svg class="cta-sparkle cta-sparkle--4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 30 30">
+        <g transform="translate(15, 15)" fill="#79bdb2" opacity="0.7">
+          <path d="M0,-10 C0,-2.3 -2.3,0 -10,0 C-2.3,0 0,2.3 0,10 C0,2.3 2.3,0 10,0 C2.3,0 0,-2.3 0,-10Z" />
+        </g>
+      </svg>
+
+      <!-- BIG LEFT ASTERISK - half cut off screen edge -->
+      <span class="material-symbols-outlined cta-deco-star cta-deco-star--left">asterisk</span>
+
+      <!-- SMALL RIGHT ASTERISK -->
+      <span class="material-symbols-outlined cta-deco-star cta-deco-star--right">asterisk</span>
+
+      <!-- CENTERED CONTENT -->
+      <div class="cta-wave__inner">
+        <h2>
+          Stuck is a place, not a destination. Clarity, confidence,
+          and peace are not things you have to invent-they are
+          things we help you remember. You can have it.
+        </h2>
+        <p class="cta-sub">Let's take the first step - together.</p>
+        <a href="https://calendly.com/kahallifecoaching/30min" target="_blank" rel="noopener noreferrer"
+          class="cta-wave__btn">
+          FREE 30-MIN CALL
+          <span class="cta-wave__btn-arrow">
+            <i class="fa-solid fa-arrow-up"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo-wrapper" data-aos="fade-up" data-aos-duration="600">
+        <div class="footer-logo">Kahal Life Coaching</div>
+        <p class="footer-tagline">Empower. Transform. Thrive.</p>
+        <p class="footer-tagline-second">Your journey to clarity begins here.</p>
+      </div>
+
+      <div class="footer-links" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <a href="index.html" class="footer-nav-link">HOME</a>
+        <a href="coaching.html" class="footer-nav-link">COACHING</a>
+        <a href="contact.html" class="footer-nav-link">CONTACT</a>
+      </div>
+
+      <div class="footer-contact-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="footer-contact">
+          <!-- <p>
+            <a href="tel:+18325528111" class="footer-contact-link call">
+              <i class="fa-solid fa-phone"></i> +1 832-552-8111
+            </a>
+          </p> -->
+
+          <p>
+            <a href="mailto:kahallifecoaching@gmail.com" class="footer-contact-link">
+              <i class="fa-solid fa-envelope"></i> kahallifecoaching@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <a href="https://www.instagram.com/kahallifecoaching" target="_blank" class="footer-contact-link">
+              <i class="fa-brands fa-instagram"></i> KahalLifeCoaching
+            </a>
+          </p>
+
+          <p>
+            <a href="https://www.facebook.com/profile.php?id=61580940513047" target="_blank"
+              class="footer-contact-link">
+              <i class="fa-brands fa-facebook-f"></i> Kahal Life Coaching
+            </a>
+          </p>
+        </div>
+        <!-- <div class="footer-social">
+          <a href="https://instagram.com/" target="_blank" class="social-icon instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com/" target="_blank" class="social-icon facebook"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://linkedin.com/" target="_blank" class="social-icon linkedin"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://youtube.com/" target="_blank" class="social-icon youtube"><i
+              class="fa-brands fa-youtube"></i></a>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>Copyright © 2026 Kahal Life Coaching, All Rights Reserved.<span class="mobilefooterbr"><br></span> Design and
+          Developed by <a href="https://techorses.com" target="_blank"
+            class="techorses-link"><strong>Techorses</strong></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+
+</html>

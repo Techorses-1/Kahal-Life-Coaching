@@ -1,0 +1,1379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #b9d8d1, #909393);
+}
+
+/* ================= CONTACT HERO SECTION ================= */
+.contact-hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* BG IMAGE from Unsplash - REPLACES gradient */
+  background: url('/assets/images/contact/hero.svg') center center / cover no-repeat;
+  /* background-color: #b0cbc2;  */
+  /* fallback */
+}
+
+
+
+/* ================= BG PNG IMAGES ================= */
+.contact-hero-bg-img {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  display: none;
+}
+
+.contact-hero-bg-topright {
+  top: 0;
+  right: 0;
+  width: clamp(340px, 35vw, 520px);
+  height: auto;
+}
+
+.contact-hero-bg-leftcenter {
+  top: 65%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 400px;
+  height: auto;
+}
+
+/* ================= SPARKLES SVG ================= */
+.contact-hero-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ================= SPARKLE ANIMATION ================= */
+@keyframes contact-sparkle-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+}
+
+.contact-sparkle {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0.6;
+  animation: contact-sparkle-pulse 2.8s ease-in-out infinite;
+}
+
+.contact-sparkle-1 {
+  animation-delay: 0s;
+}
+
+.contact-sparkle-2 {
+  animation-delay: -0.7s;
+}
+
+.contact-sparkle-3 {
+  animation-delay: -1.4s;
+}
+
+.contact-sparkle-4 {
+  animation-delay: -2.1s;
+}
+
+/* ================= CONTENT CENTERED ================= */
+.contact-hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* ================= HEADLINE ================= */
+.contact-hero-headline {
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 900;
+  font-size: clamp(48px, 8vw, 110px);
+  line-height: 1.08;
+  color: #000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+/* ================= SUBTEXT ================= */
+.contact-hero-sub {
+  font-family: "Ubuntu", sans-serif !important;
+  font-size: clamp(16px, 2vw, 22px);
+  color: #1f1f1f;
+  max-width: 600px;
+  margin-bottom: 38px;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+/* ================= BUTTON ================= */
+.contact-hero-btn {
+  position: relative;
+  width: 290px;
+  height: 66px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(215, 226, 220, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Rosario", sans-serif;
+}
+
+.contact-hero-btn:hover {
+  background: rgba(215, 226, 220, 0.5);
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn-text {
+  width: calc(100% - 58px);
+  height: 50px;
+  border-radius: 999px;
+  background: #000;
+  color: #d9ece4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.3s ease;
+  font-family: "Rosario", sans-serif;
+}
+
+.contact-hero-btn:hover .contact-btn-text {
+  background: #1a1a1a;
+}
+
+.contact-btn-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.contact-hero-btn:hover .contact-btn-icon {
+  transform: rotate(45deg);
+  border-color: #1a1a1a;
+}
+
+.contact-btn-icon i {
+  font-size: 18px;
+}
+
+/* ================= RESPONSIVE HEIGHTS ================= */
+/* Tablet: 78vh */
+@media (max-width: 1024px) {
+  .contact-hero {
+    height: 78vh;
+  }
+
+  .contact-hero-headline {
+    font-size: clamp(36px, 7vw, 64px);
+    margin-bottom: 20px;
+  }
+
+  .contact-hero-sub {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .contact-hero-btn {
+    width: 240px;
+    height: 58px;
+  }
+
+  .contact-btn-text {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .contact-btn-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact-btn-icon i {
+    font-size: 15px;
+  }
+
+  .contact-hero-bg-topright {
+    width: clamp(260px, 30vw, 380px);
+  }
+
+  .contact-hero-bg-leftcenter {
+    width: clamp(120px, 14vw, 200px);
+  }
+}
+
+/* Mobile: 51vh */
+@media (max-width: 767px) {
+  .contact-hero {
+    height: 51vh;
+    min-height: unset;
+  }
+
+  .contact-hero-content {
+    padding: 0 20px;
+  }
+
+  .contact-hero-headline {
+    font-size: clamp(28px, 8vw, 42px);
+    margin-bottom: 12px;
+  }
+
+  .contact-hero-sub {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .contact-hero-btn {
+    width: 180px;
+    height: 46px;
+    padding: 5px 6px 5px 12px;
+  }
+
+  .contact-btn-text {
+    width: calc(100% - 38px);
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .contact-btn-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-btn-icon i {
+    font-size: 12px;
+  }
+
+  .contact-hero-bg-topright {
+    width: 200px;
+    opacity: 0.65;
+  }
+
+  .contact-hero-bg-leftcenter {
+    width: 160px;
+    opacity: 0.55;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .contact-hero {
+    height: 51vh;
+  }
+
+  .contact-hero-headline {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .contact-hero-sub {
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+
+  .contact-hero-btn {
+    width: 160px;
+    height: 42px;
+  }
+
+  .contact-btn-text {
+    font-size: 10px;
+    height: 32px;
+  }
+
+  .contact-btn-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .contact-hero {
+    height: 100vh;
+  }
+}
+
+
+
+
+/* =============================================
+   CONTACT FORM SECTION — contact-form.css
+   Add to <head>: <link rel="stylesheet" href="css/contact-form.css" />
+   ============================================= */
+
+/* ========== SECTION WRAPPER ========== */
+.cf-section {
+  position: relative;
+  width: 100%;
+  background: #ebf4f2;
+  padding: 100px 40px;
+  overflow: hidden;
+}
+
+/* ========== SPARKLE ACCENTS ========== */
+.cf-sparkle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes cf-sparkle-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+}
+
+.cf-sp {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0.5;
+  animation: cf-sparkle-pulse 3s ease-in-out infinite;
+}
+
+.cf-sp-1 {
+  animation-delay: 0s;
+}
+
+.cf-sp-2 {
+  animation-delay: -0.8s;
+}
+
+.cf-sp-3 {
+  animation-delay: -1.5s;
+}
+
+.cf-sp-4 {
+  animation-delay: -2.2s;
+}
+
+/* ========== INNER LAYOUT: 40/60 split ========== */
+.cf-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto 0 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+/* ========== LEFT PANEL (40%) ========== */
+.cf-left {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding-top: 20px;
+  padding-right: 30px;
+
+
+  @media (max-width: 767px) {
+
+    padding-right: 0px;
+  }
+
+
+
+}
+
+/* ========== HEADING ROW: eyebrow + heading same line ========== */
+.cf-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+}
+
+.cf-eyebrow {
+  font-family: "Rosario", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2aaa8a;
+  display: block;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* AOS reveal triggers this */
+.cf-left.aos-animate .cf-eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cf-heading {
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.05;
+  color: #000;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.cf-body {
+  font-family: "Rosario", sans-serif;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.75;
+  color: #3a3a3a;
+  max-width: 400px;
+  margin-bottom: 44px;
+  margin-top: 16px;
+}
+
+/* ========== CONTACT ITEMS ========== */
+.cf-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-right: 20px;
+
+  @media (max-width: 767px) {
+
+    padding-right: 0;
+    padding-left: 0 !important;
+  }
+
+}
+
+.cf-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(42, 170, 138, 0.12);
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cf-contact-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(6px);
+  box-shadow: 0 8px 28px rgba(42, 170, 138, 0.14);
+  border-color: rgba(42, 170, 138, 0.35);
+}
+
+.cf-contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #000;
+  color: #ebf4f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cf-contact-item:hover .cf-contact-icon {
+  background: #2aaa8a;
+  transform: rotate(8deg) scale(1.08);
+}
+
+.cf-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cf-contact-label {
+  font-family: "Rosario", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2aaa8a;
+}
+
+.cf-contact-val {
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  transition: color 0.3s ease;
+}
+
+.cf-contact-item:hover .cf-contact-val {
+  color: #2aaa8a;
+}
+
+/* ========== RIGHT PANEL (60%) ========== */
+.cf-right {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+/* ========== FORM CARD ========== */
+.cf-form-card {
+  background: #fffafa;
+  border-radius: 28px;
+  padding: 52px 48px;
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(42, 170, 138, 0.08);
+}
+
+.cf-form-tagline {
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+  margin-bottom: 36px;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+/* ========== FORM FIELDS ========== */
+.cf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf-label {
+  font-family: "Rosario", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.01em;
+}
+
+.cf-req {
+  color: #2aaa8a;
+  margin-left: 2px;
+}
+
+.cf-optional {
+  font-size: 11.5px;
+  color: #999;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.cf-input {
+  width: 100%;
+  padding: 13px 0 13px 8px;
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  color: #111;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+}
+
+.cf-input::placeholder {
+  color: #bbb;
+  font-size: 14.5px;
+  letter-spacing: 0.2px;
+}
+
+.cf-input:focus {
+  border-bottom-color: #2aaa8a;
+}
+
+.cf-input.cf-error-field {
+  border-bottom-color: #e05252;
+}
+
+.cf-textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.6;
+}
+
+/* ========== SELECT ========== */
+.cf-select-wrap {
+  position: relative;
+}
+
+.cf-select {
+  width: 100%;
+  padding: 13px 36px 13px 10px;
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  color: #111;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+}
+
+.cf-select:focus {
+  border-bottom-color: #2aaa8a;
+}
+
+.cf-select.cf-error-field {
+  border-bottom-color: #e05252;
+}
+
+.cf-select option[value=""] {
+  color: #bbb;
+}
+
+.cf-select-arrow {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #888;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+.cf-select:focus+.cf-select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+  color: #2aaa8a;
+}
+
+/* ========== ERROR MESSAGES ========== */
+.cf-err {
+  font-family: "Rosario", sans-serif;
+  font-size: 12px;
+  color: #e05252;
+  min-height: 16px;
+  display: block;
+  margin-top: 2px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cf-err.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.cf-submit-btn {
+  position: relative;
+  width: 100%;
+  height: 66px;
+  border: none;
+  border-radius: 999px;
+  background: #ebf4f2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
+}
+
+.cf-submit-btn:hover:not(:disabled) {
+  background: rgba(215, 226, 220, 0.55);
+  transform: scale(1.01);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cf-submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.cf-submit-text {
+  flex: 1;
+  height: 50px;
+  border-radius: 999px;
+  background: #000;
+  color: #d9ece4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: background 0.3s ease;
+}
+
+.cf-submit-btn:hover:not(:disabled) .cf-submit-text {
+  background: #1a1a1a;
+}
+
+.cf-submit-btn:disabled .cf-submit-text {
+  background: #555;
+}
+
+.cf-submit-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cf-submit-btn:hover:not(:disabled) .cf-submit-icon {
+  transform: rotate(45deg);
+  border-color: #1a1a1a;
+}
+
+/* Loading spinner inside icon */
+@keyframes cf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cf-submit-btn.loading .cf-submit-icon i {
+  animation: cf-spin 0.7s linear infinite;
+}
+
+.cf-submit-btn.loading .cf-submit-text {
+  letter-spacing: 0.12em;
+}
+
+/* ========== SUCCESS MESSAGE ========== */
+.cf-success {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  background: rgba(42, 170, 138, 0.12);
+  border: 1px solid rgba(42, 170, 138, 0.3);
+  border-radius: 14px;
+  padding: 16px 20px;
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  color: #1a7a60;
+  font-weight: 600;
+  margin-top: 6px;
+  animation: cf-fadeIn 0.4s ease;
+}
+
+.cf-success i {
+  font-size: 20px;
+  color: #2aaa8a;
+  flex-shrink: 0;
+}
+
+@keyframes cf-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== TABLET: column view (same as mobile) ========== */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .cf-section {
+    padding: 80px 40px;
+  }
+
+  .cf-inner {
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  .cf-heading-row {
+
+    flex-direction: column;
+  }
+
+  .cf-left {
+    flex: unset;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 0;
+  }
+
+
+
+  .cf-right {
+    flex: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cf-heading {
+    font-size: clamp(40px, 6vw, 60px);
+  }
+
+  .cf-body {
+    max-width: 100%;
+  }
+
+  .cf-form-card {
+    padding: 44px 40px;
+    border-radius: 24px;
+  }
+
+  .cf-contact-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 17px;
+  }
+}
+
+/* ========== MOBILE: column (text first, then form) ========== */
+@media (max-width: 767px) {
+
+  .desktopbr {
+    display: none;
+  }
+
+  .cf-section {
+    padding: 60px 20px 60px 0;
+  }
+
+  .cf-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Left panel: full width */
+  .cf-left {
+    flex: unset;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .cf-body {
+    text-align: center;
+  }
+
+  .cf-heading-row {
+
+    flex-direction: column;
+  }
+
+  /* Right panel: full width */
+  .cf-right {
+    flex: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cf-heading {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .cf-body {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .cf-form-card {
+    padding: 32px 22px;
+    border-radius: 20px;
+  }
+
+  .cf-submit-btn {
+    height: 58px;
+  }
+
+  .cf-submit-text {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .cf-submit-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .cf-contact-item:hover {
+    transform: translateX(4px);
+  }
+}
+
+/* @media (max-width: 480px) {
+  .cf-form-card {
+    padding: 28px 16px;
+  }
+
+  .cf-heading {
+    font-size: 34px;
+  }
+
+  .cf-submit-btn {
+    height: 52px;
+  }
+
+  .cf-submit-text {
+    height: 38px;
+    font-size: 12px;
+  }
+
+  .cf-submit-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+} */
+
+@media (min-width: 1600px) and (max-width: 2500px) {
+
+  .cf-inner {
+    max-width: 1500px;
+    margin: 0 auto !important;
+
+  }
+}
+
+
+/* ========== TOAST NOTIFICATION ========== */
+.cf-toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  z-index: 9999;
+  min-width: 280px;
+  max-width: 450px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cf-toast.cf-toast-show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.cf-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cf-toast-success .cf-toast-content {
+  background: #2aaa8a;
+  color: white;
+}
+
+.cf-toast-error .cf-toast-content {
+  background: #dc3545;
+  color: white;
+}
+
+.cf-toast-warning .cf-toast-content {
+  background: #ffc107;
+  color: #333;
+}
+
+.cf-toast-content i {
+  font-size: 20px;
+}
+
+.cf-toast-progress {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: toastProgress 4s linear forwards;
+}
+
+.cf-toast-success .cf-toast-progress {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.cf-toast-error .cf-toast-progress {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.cf-toast-warning .cf-toast-progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes toastProgress {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+
+
+
+/* =============================================
+   FAQ SECTION — faq.css
+   Add to <head>: <link rel="stylesheet" href="css/faq.css" />
+   ============================================= */
+
+/* ========== SECTION ========== */
+.faq {
+  width: 100%;
+  background: #fffafa;
+  padding: 80px 20px;
+}
+
+.faq__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== HEADING (matches who-for style exactly) ========== */
+.faq__heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.faq__line {
+  width: 8px;
+  height: 60px;
+  background: #000;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.faq__heading h2 {
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+
+/* ========== TWO INDEPENDENT COLUMNS ========== */
+/* Key: each column is fully independent — opening one
+   never affects the layout or height of the other */
+.faq__cols {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.faq__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ========== FAQ ITEM BOX ========== */
+.faq__item {
+  background: #ebf4f2;
+  border-radius: 999px;
+  overflow: hidden;
+  transition: border-radius 0.35s ease, background 0.3s ease;
+}
+
+/* When open */
+.faq__item.active {
+  border-radius: 24px;
+  background: #d6eceb;
+}
+
+/* Hover on closed */
+.faq__item:not(.active):hover {
+  background: #c8e0d9;
+}
+
+/* ========== QUESTION BUTTON ========== */
+.faq__q {
+  width: 100%;
+  min-height: 60px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* vertically centers everything when 1 line */
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.faq__q:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Left side: icon + text */
+.faq__q-left {
+  display: flex;
+  align-items: flex-start;
+  /* icon always top-aligned to first line */
+  gap: 14px;
+  flex: 1;
+}
+
+/* Asterisk icon — top-aligned to first line of text */
+.faq__icon {
+  font-size: 26px !important;
+  line-height: 1 !important;
+  color: #000;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 300,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+.faq__q-text {
+  font-family: "Rosario", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* Chevron — stays centered with button, rotates on active */
+.faq__chevron {
+  font-size: 14px;
+  color: #000;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: flex-start;
+  margin-top: 3px;
+}
+
+.faq__item.active .faq__chevron {
+  transform: rotate(180deg);
+}
+
+/* ========== ANSWER (collapsed by default) ========== */
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.35s ease;
+  padding: 0 20px 0 60px;
+}
+
+.faq__item.active .faq__answer {
+  max-height: 300px;
+  padding: 0 20px 20px 60px;
+}
+
+.faq__answer p {
+  margin: 0;
+  font-family: "Rosario", sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+  font-style: normal;
+  padding-top: 5px;
+}
+
+/* ========== TABLET: column view ========== */
+@media (max-width: 1024px) {
+  .faq {
+    padding: 60px 24px 68px;
+  }
+
+  .faq__heading {
+    margin-bottom: 36px;
+  }
+
+  .faq__line {
+    height: 45px;
+  }
+
+  .faq__heading h2 {
+    font-size: 34px;
+  }
+
+  /* Stack columns on tablet */
+  .faq__cols {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .faq__col {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .faq__q-text {
+    font-size: 15px;
+  }
+}
+
+/* ========== MOBILE: column view ========== */
+@media (max-width: 767px) {
+  .faq {
+    padding: 46px 16px 52px;
+  }
+
+  .faq__heading {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .faq__line {
+    width: 3.9px;
+    height: 30px;
+  }
+
+  .faq__heading h2 {
+    font-size: 26px;
+  }
+
+  .faq__cols {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq__col {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .faq__icon {
+    font-size: 22px !important;
+  }
+
+  .faq__q-text {
+    font-size: 14px;
+  }
+
+  .faq__answer {
+    padding: 0 16px 0 52px;
+  }
+
+  .faq__item.active .faq__answer {
+    padding: 0 16px 18px 52px;
+  }
+
+  .faq__answer p {
+    font-size: 14px;
+  }
+
+  .faq__chevron {
+    font-size: 13px;
+  }
+}
+
+
+
+
+.mobilebreak {
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  .mobilebreak {
+    display: inline;
+  }
+}
